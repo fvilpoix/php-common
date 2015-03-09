@@ -1,0 +1,23 @@
+{
+    "name": "fvilpoix/php-common",
+    "description": "My own tools",
+    "type": "lib",
+    "homepage": "https://github.com/fvilpoix/php-common",
+    "authors": [
+        {
+            "name": "Florian Vilpoix",
+            "email": "florianv@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "nesbot/carbon": "1.13.0"
+    },
+    "suggest": {
+        "imagine/Imagine": "To use Resizator component",
+        "knplabs/knp-gaufrette-bundle": "To use Resizator component"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}
