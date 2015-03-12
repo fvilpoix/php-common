@@ -14,9 +14,10 @@ class SingleColumnHydrator extends AbstractHydrator
     protected function hydrateAllData()
     {
         $result = array();
+        $cache = array();
 
         while ($data = $this->_stmt->fetch(\PDO::FETCH_ASSOC)) {
-            $this->hydrateRowData($data, $result);
+            $this->hydrateRowData($data, $cache, $result);
         }
 
         return $result;
