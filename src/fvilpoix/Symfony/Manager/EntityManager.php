@@ -10,7 +10,8 @@ abstract class EntityManager extends Manager
     protected $baseClass;
 
     /**
-     * @param  string                         $name
+     * @param string $name
+     *
      * @return \Doctrine\ORM\EntityRepository
      */
     public function getRepository($name = null)

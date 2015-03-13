@@ -20,7 +20,7 @@ abstract class Manager
     }
 
     /**
-     * Persist object in database
+     * Persist object in database.
      *
      * @param object  $entity
      * @param boolean $flush
@@ -34,7 +34,7 @@ abstract class Manager
     }
 
     /**
-     * Persist multiple object
+     * Persist multiple object.
      *
      * @param $entities
      * @param bool $flush
@@ -50,7 +50,7 @@ abstract class Manager
     }
 
     /**
-     * Remove multiple object
+     * Remove multiple object.
      *
      * @param $entities
      * @param bool $flush
@@ -66,7 +66,7 @@ abstract class Manager
     }
 
     /**
-     * Delete object in database
+     * Delete object in database.
      *
      * @param object $entity
      */

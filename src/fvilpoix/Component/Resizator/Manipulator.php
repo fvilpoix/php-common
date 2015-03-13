@@ -18,7 +18,7 @@ class Manipulator
     }
 
     /**
-     * Resize image by its width. Compute the height proportionaly to the width
+     * Resize image by its width. Compute the height proportionaly to the width.
      */
     protected static function resizeByWidth(ImageInterface $image, Format $format)
     {
@@ -37,7 +37,7 @@ class Manipulator
     }
 
     /**
-     * Resize image by its height. Compute the witdh proportionaly to the height
+     * Resize image by its height. Compute the witdh proportionaly to the height.
      */
     protected static function resizeByHeight(ImageInterface $image, Format $format)
     {
@@ -56,7 +56,7 @@ class Manipulator
     }
 
     /**
-     * Force the width and the height
+     * Force the width and the height.
      */
     protected static function resizeByWidthHeight(ImageInterface $image, Format $format)
     {

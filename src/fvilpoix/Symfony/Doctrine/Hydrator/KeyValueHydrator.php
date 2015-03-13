@@ -5,7 +5,7 @@ use Doctrine\ORM\Internal\Hydration\AbstractHydrator;
 use Doctrine\ORM\Internal\Hydration\HydrationException;
 
 /**
- * Description of KeyValueHydrator
+ * Description of KeyValueHydrator.
  *
  * Hydrates a pdo 2 columns resultset, using first column as keys, and second
  * as value

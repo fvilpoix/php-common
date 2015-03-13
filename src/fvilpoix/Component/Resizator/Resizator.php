@@ -103,6 +103,7 @@ class Resizator
      * @param string $fileKey
      * @param string $fileKeyWithFormat
      * @param Format $format
+     *
      * @return
      */
     protected function generateThumbnail($fileKey, $fileKeyWithFormat, Format $format)

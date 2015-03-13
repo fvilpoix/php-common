@@ -51,7 +51,8 @@ class DatabaseTools
     }
 
     /**
-     * @param  iterable   $metadatas list of \Doctrine\ORM\Mapping\ClassMetadata
+     * @param iterable $metadatas list of \Doctrine\ORM\Mapping\ClassMetadata
+     *
      * @throws \Exception
      */
     public function truncateMetadatas($metadatas)
