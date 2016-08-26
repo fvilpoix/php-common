@@ -23,7 +23,7 @@ class Manipulator
     protected static function resizeByWidth(ImageInterface $image, Format $format)
     {
         $expectedWidth = $format->getWidth();
-        $size          = $image->getSize();
+        $size = $image->getSize();
         $originalWidth = $size->getWidth();
 
         if ($originalWidth < $expectedWidth) {
@@ -42,7 +42,7 @@ class Manipulator
     protected static function resizeByHeight(ImageInterface $image, Format $format)
     {
         $expectedHeight = $format->getHeight();
-        $size           = $image->getSize();
+        $size = $image->getSize();
         $originalHeight = $size->getHeight();
 
         if ($originalHeight < $expectedHeight) {

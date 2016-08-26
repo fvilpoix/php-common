@@ -2,14 +2,14 @@
 
 namespace fvilpoix\Symfony\Bundle\ToolsBundle\Doctrine;
 
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 class DatabaseTools
 {
     /**
-     * @var Doctrine\Common\Persistence\ObjectManager
+     * @var \Doctrine\ORM\EntityManagerInterface
      */
-    protected $om;
+    protected $em;
 
     /**
      * @var \Doctrine\DBAL\Connection
@@ -21,7 +21,7 @@ class DatabaseTools
      */
     protected $truncatedTables;
 
-    public function __construct(ObjectManager $om)
+    public function __construct(EntityManagerInterface $om)
     {
         $this->om = $om;
         $this->connection = $om->getConnection();
@@ -34,7 +34,7 @@ class DatabaseTools
 
     public function truncateAll()
     {
-        $this->truncateMetadatas($this->om->getMetadataFactory()->getAllMetadata());
+        $this->truncateMetadatas($this->em->getMetadataFactory()->getAllMetadata());
     }
 
     /**
@@ -44,7 +44,7 @@ class DatabaseTools
     {
         $metadatas = [];
         foreach ($entitiesNames as $entity) {
-            $metadatas[] = $this->om->getMetadataFactory()->getMetadataFor($entity);
+            $metadatas[] = $this->em->getMetadataFactory()->getMetadataFor($entity);
         }
 
         $this->truncateMetadatas($metadatas);
@@ -95,7 +95,7 @@ class DatabaseTools
 
     public function generateSchema()
     {
-        $metadatas = $this->om->getMetadataFactory()->getAllMetadata();
+        $metadatas = $this->em->getMetadataFactory()->getAllMetadata();
 
         if (!empty($metadatas)) {
             $tool = new \Doctrine\ORM\Tools\SchemaTool($this->om);

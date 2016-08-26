@@ -22,8 +22,8 @@ abstract class Manager
     /**
      * Persist object in database.
      *
-     * @param object  $entity
-     * @param boolean $flush
+     * @param object $entity
+     * @param bool   $flush
      */
     public function saveEntity($entity, $flush = true)
     {

@@ -1,4 +1,5 @@
 <?php
+
 namespace fvilpoix\Symfony\Doctrine\Hydrator;
 
 use Doctrine\ORM\Internal\Hydration\AbstractHydrator;
@@ -25,7 +26,6 @@ class KeyValueHydrator extends AbstractHydrator
     protected function hydrateAllData()
     {
         $result = array();
-        $cache  = array();
 
         $valid = false;
 
@@ -36,7 +36,7 @@ class KeyValueHydrator extends AbstractHydrator
                 }
                 $valid = true;
             }
-            $this->hydrateRowData($data, $cache, $result);
+            $this->hydrateRowData($data, $result);
         }
 
         return $result;
@@ -45,7 +45,7 @@ class KeyValueHydrator extends AbstractHydrator
     /**
      * {@inheritdoc}
      */
-    protected function hydrateRowData(array $data, array &$cache, array &$result)
+    protected function hydrateRowData(array $data, array &$result)
     {
         $result[$data[0]] = $data[1];
     }

@@ -16,7 +16,7 @@ class Image
 
     public function __construct($mimeType, $binary = null)
     {
-        $this->mimeType      = $mimeType;
+        $this->mimeType = $mimeType;
         $this->imageAsBinary = $binary ?: null;
     }
 

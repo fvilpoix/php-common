@@ -10,9 +10,9 @@ class Resizator
 {
     protected static $MIMES = array(
         'jpeg' => 'image/jpeg',
-        'jpg'  => 'image/jpeg',
-        'png'  => 'image/png',
-        'gif'  => 'image/gif',
+        'jpg' => 'image/jpeg',
+        'png' => 'image/png',
+        'gif' => 'image/gif',
     );
 
     /**
@@ -48,7 +48,7 @@ class Resizator
             $binaryContent = $this->generateThumbnail($sanitizedFileKey, $fileKeyWithFormat, $format);
         }
 
-        $mimeType  = $this->getMimeType($sanitizedFileKey);
+        $mimeType = $this->getMimeType($sanitizedFileKey);
 
         return new Image($mimeType, $binaryContent);
     }
@@ -126,8 +126,8 @@ class Resizator
             throw new Exception\ImageDoesNotExistException();
         }
 
-        $imagine      = new Imagine();
-        $image        = $imagine->load($blobOriginal);
+        $imagine = new Imagine();
+        $image = $imagine->load($blobOriginal);
 
         $resizedImage = Manipulator::resize($image, $format);
 

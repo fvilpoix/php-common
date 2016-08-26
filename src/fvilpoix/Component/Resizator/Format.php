@@ -5,8 +5,8 @@ namespace fvilpoix\Component\Resizator;
 class Format
 {
     const FLAG_WH = 'x'; // Format {width}x{height}
-    const FLAG_W  = 'w'; // w{width}
-    const FLAG_H  = 'h'; // h{height}
+    const FLAG_W = 'w'; // w{width}
+    const FLAG_H = 'h'; // h{height}
 
     /**
      * @var string
@@ -51,7 +51,7 @@ class Format
     protected function extractWidthHeight($formatString)
     {
         $formatTokens = explode(self::FLAG_WH, $formatString);
-        $this->width  = (int) $formatTokens[0];
+        $this->width = (int) $formatTokens[0];
         $this->height = (int) $formatTokens[1];
         $this->type = self::FLAG_WH;
     }

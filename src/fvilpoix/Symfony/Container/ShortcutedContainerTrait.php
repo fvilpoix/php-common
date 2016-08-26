@@ -26,7 +26,7 @@ trait ShortcutedContainerTrait
     }
 
     /**
-     * @return Symfony\Component\EventDispatcher\EventDispatcherInterface
+     * @return \Symfony\Component\EventDispatcher\EventDispatcherInterface
      */
     protected function getEventDispatcher()
     {

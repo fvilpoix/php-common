@@ -24,7 +24,7 @@ abstract class AbstractCommand extends ContainerAwareCommand
 
             if (!$dialog->askConfirmation(
                 $output,
-                "<question>Do command on env <error>prod</error> ?</question>",
+                '<question>Do command on env <error>prod</error> ?</question>',
                 false
             )) {
                 $output->writeln('<comment>Command interupted by user</comment>');
@@ -92,8 +92,8 @@ abstract class AbstractCommand extends ContainerAwareCommand
     protected function runCommand(InputInterface $input, OutputInterface $output, $commandString, array $options = array(), $quiet = true)
     {
         $defaults = [
-            '-e'        => $input->getOption('env'),
-            'command'   => $commandString,
+            '-e' => $input->getOption('env'),
+            'command' => $commandString,
         ];
 
         if (!$input->isInteractive()) {
